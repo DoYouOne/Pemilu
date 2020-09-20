@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Dashboard by Creative Tim
+    HATI-S1
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -28,29 +28,29 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+          Selamat Datang
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="{{ URL::asset('/') }}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="./user.html">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="{{ url('/vote') }}">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>Vote Now</p>
             </a>
           </li>
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="./typography.html">
               <i class="material-icons">library_books</i>
               <p>Typography</p>
@@ -79,13 +79,13 @@
               <i class="material-icons">language</i>
               <p>RTL Support</p>
             </a>
-          </li>
-          <li class="nav-item active-pro ">
+          </li> --}}
+          {{-- <li class="nav-item active-pro ">
             <a class="nav-link" href="./upgrade.html">
               <i class="material-icons">unarchive</i>
               <p>Upgrade to PRO</p>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </div>
@@ -157,7 +157,7 @@
       </nav>
       <!-- End Navbar -->
       <div class="content">
-        <div class="container-fluid">
+        {{-- <div class="container-fluid">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
@@ -569,7 +569,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
       <footer class="footer">
         <div class="container-fluid">
@@ -602,7 +602,7 @@
             <script>
               document.write(new Date().getFullYear())
             </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            <a href="https://www.hati-s1.com" target="_blank">HATI-S1</a> for a better web | @DoYouOne.
           </div>
         </div>
       </footer>

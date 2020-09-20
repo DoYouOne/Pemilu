@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('portal');
+    return view('index');
 });
 
 Auth::routes();
@@ -30,4 +30,5 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
 
 Route::group(['middleware' => ['auth','CheckRole:1,2']], function(){
     Route::get('/home', 'User\DashboardController@index');
+    Route::get('/vote', 'Vote\VoteController@index');
 });
