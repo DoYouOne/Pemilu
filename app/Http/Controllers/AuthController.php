@@ -25,7 +25,7 @@ class AuthController extends Controller
             if($role->status == '0'){
                 return redirect('/dashboard');
             } else if($role->status == '1'){
-                return redirect('/home');
+                return redirect('/welcome');
             } else if($role->status == '2'){
                 return redirect('/home');
             }

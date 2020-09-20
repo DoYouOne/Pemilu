@@ -28,7 +28,12 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/dashboard', 'Admin\DashboardController@index');
 });
 
-Route::group(['middleware' => ['auth','CheckRole:1,2']], function(){
+Route::group(['middleware' => ['auth','CheckRole:1']], function(){
+    Route::get('/welcome', 'User\DashboardController@index');
+    Route::get('/vote', 'VoteController@index');
+});
+
+Route::group(['middleware' => ['auth','CheckRole:2']], function(){
     Route::get('/home', 'User\DashboardController@index');
-    Route::get('/vote', 'Vote\VoteController@index');
+    Route::get('/vote', 'VoteController@index');
 });
