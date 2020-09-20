@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('portal');
 });
 
 Auth::routes();
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/login_process','AuthController@post_login')->name('login_process');
+Route::get('/logout', 'AuthController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth','CheckRole:0']], function(){
+    Route::get('/dashboard', 'Admin\DashboardController@index');
+});
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth','CheckRole:1,2']], function(){
+    Route::get('/home', 'User\DashboardController@index');
+});
