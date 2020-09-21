@@ -4,13 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class VoteController extends Controller
+class ProfileController extends Controller
 {
-       /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -23,6 +18,6 @@ class VoteController extends Controller
      */
     public function index()
     {
-        return view('vote.index');
+        return view('profile.index');
     }
 }

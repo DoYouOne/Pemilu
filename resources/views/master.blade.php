@@ -132,7 +132,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="#">Mike John responded to your email</a>
                   <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
+                  <a class="dropdown-item" href="#">Youre now friend with Andrew</a>
                   <a class="dropdown-item" href="#">Another Notification</a>
                   <a class="dropdown-item" href="#">Another One</a>
                 </div>
@@ -145,10 +145,9 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="{{ url('profile') }}">{{ Auth::user()->email }}</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="{{ url('/logout') }}">Log out</a>
                 </div>
               </li>
             </ul>
@@ -570,6 +569,7 @@
             </div>
           </div>
         </div> --}}
+        @yield('content')
       </div>
       <footer class="footer">
         <div class="container-fluid">

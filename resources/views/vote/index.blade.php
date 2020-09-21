@@ -2,7 +2,7 @@
 
 @section ('content')
     <h3>Selamat Datang</h3>
-    <h4>Ini adalah halaman Dashboard Admin ber status {{ auth()->user()->status }}</h4>
+    <h4>Ini adalah halaman Vote ber status {{ auth()->user()->status }}</h4>
     <span>{{auth()->user()->email}}</span>
 
 @stop

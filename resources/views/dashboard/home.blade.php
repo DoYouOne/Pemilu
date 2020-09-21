@@ -1,12 +1,8 @@
-<html>
-    <head></head>
-    <body>
-        <h3>Selamat Datang</h3>
-        <h4>Ini adalah halaman user ber status {{ auth()->user()->status }}</h4>
-        <span>{{auth()->user()->email}}</span>
+@extends('master')
 
-        <a href="{{ url('logout') }}">
-            <button>Logout</button>
-        </a>
-    </body>
-</html>
+@section ('content')
+    <h3>Selamat Datang</h3>
+    <h4>Ini adalah halaman Dashboard User ber status {{ auth()->user()->status }}</h4>
+    <span>{{auth()->user()->email}}</span>
+
+@stop
