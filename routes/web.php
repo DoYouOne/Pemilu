@@ -27,6 +27,7 @@ Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/dashboard', 'Admin\DashboardController@index');
     Route::get('/data_user', 'Admin\DataUserController@index');
+    Route::get('/vote/admin', 'Admin\VoteController@index');
 });
 
 Route::group(['middleware' => ['auth','CheckRole:1']], function(){

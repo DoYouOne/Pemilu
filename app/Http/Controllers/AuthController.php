@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class AuthController extends Controller
 {
     public function login(){
-        return view('auth.login');
+        return view('auth.login_page');
     }
 
     public function post_login(Request $request){
@@ -25,9 +25,9 @@ class AuthController extends Controller
             if($role->status == '0'){
                 return redirect('/dashboard');
             } else if($role->status == '1'){
-                return redirect('/welcome');
+                return redirect('/');
             } else if($role->status == '2'){
-                return redirect('/home');
+                return redirect('/');
             }
         } else{
             return redirect('/login');

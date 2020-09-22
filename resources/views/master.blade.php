@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="checklist.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    HATI-S1
+    e-Vote
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -45,9 +45,15 @@
             </a>
           </li> --}}
           <li class="nav-item ">
-            <a class="nav-link" href="{{ url('/vote') }}">
+            <a class="nav-link" href="{{ url('/vote/admin') }}">
               <i class="material-icons">content_paste</i>
-              <p>Vote Now</p>
+              <p>Data Vote</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ url('/data_user') }}">
+              <i class="material-icons">person</i>
+              <p>Data User</p>
             </a>
           </li>
           {{-- <li class="nav-item ">
