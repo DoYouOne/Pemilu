@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/hatiscom/public_html/
-    - /bin/cp -R /home/hatiscom/HATI_PEMILU/ $DEPLOYPATH
