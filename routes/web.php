@@ -21,12 +21,15 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/login_process','AuthController@post_login')->name('login_process');
+Route::get('/register', 'Auth\RegisterController@index')->name('register');
 Route::get('/logout', 'AuthController@logout')->name('logout');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::get('/dashboard', 'Admin\DashboardController@index');
     Route::get('/data_user', 'Admin\DataUserController@index');
+    Route::post('/data_user/add', 'Admin\DataUserController@insert');
+    Route::get('/add_alumni', 'Admin\DataUserController@add_alumni');
     Route::get('/vote/admin', 'Admin\VoteController@index');
 });
 

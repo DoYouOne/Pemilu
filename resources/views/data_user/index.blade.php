@@ -37,34 +37,47 @@
               <h4 class="card-title ">Data Seluruh Pengguna</h4>
             </div>
             <div class="card-body">
+                <a href="{{ url('/add_alumni') }}">
+                    <button class="btn btn-success">
+                        <i class="material-icons">person_add_alt_1</i>
+                        &nbsp;Tambah Data Alumni
+                    </button>
+                </a>
+                <br><br>
               <div class="table-responsive">
                 <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
                     <thead>
                         <th>ID</th>
                           <th>NIM</th>
-                          <th>Nama</th>
+                          <th>Email</th>
+                          <th>Status</th>
                           <th>Vote</th>
                           <th>Aksi</th>
                     </thead>
                     <tbody>
+                        @foreach ($user as $u)
                         <tr>
-                            <td>1</td>
+                            <td>{{ $u->id }}</td>
                             <td>1818001</td>
-                            <td>Mamang Odading</td>
+                            <td>{{ $u->email }}</td>
                             <td>
-                                <i class="material-icons" id="y">done</i>
+                                @if ($u->status == 0)
+                                    Admin
+                                @elseif ($u->status == 1)
+                                    Mahasiswa
+                                @elseif ($u->status == 2)
+                                    Alumni
+                                @endif
                             </td>
-                            <td><button class="btn btn-danger">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>1818046</td>
-                            <td>Mamang </td>
                             <td>
+                                @if ($u->vote != null)
+                                    <i class="material-icons" id="y">done</i>
+                                @endif
                                 <i class="material-icons" id="n">clear</i>
                             </td>
                             <td><button class="btn btn-danger">Delete</button></td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
               </div>
