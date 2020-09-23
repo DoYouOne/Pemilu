@@ -1,8 +1,16 @@
-@extends('master')
+@extends('index')
 
 @section ('content')
-    <h3>Selamat Datang</h3>
-    <h4>Ini adalah halaman Dashboard User ber status {{ auth()->user()->status }}</h4>
-    <span>{{auth()->user()->email}}</span>
+<div class="page-content">
+    <div class="container">
+        <!-- BEGIN PAGE CONTENT INNER -->
+        <div class="page-content-inner">
+            <div class="portlet light ">
+                //Tulis disini
+            </div>
+        </div>
+        <!-- END PAGE CONTENT INNER -->
+    </div>
+</div>
 
 @stop
