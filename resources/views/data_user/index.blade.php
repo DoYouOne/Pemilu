@@ -55,9 +55,10 @@
                           <th>Aksi</th>
                     </thead>
                     <tbody>
+                        @php $no = 1; @endphp
                         @foreach ($user as $u)
                         <tr>
-                            <td>{{ $u->id }}</td>
+                            <td>{{ $no }}</td>
                             <td>1818001</td>
                             <td>{{ $u->email }}</td>
                             <td>
@@ -77,6 +78,7 @@
                             </td>
                             <td><button class="btn btn-danger">Delete</button></td>
                         </tr>
+                        @php $no++; @endphp
                         @endforeach
                     </tbody>
                 </table>

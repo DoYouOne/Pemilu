@@ -206,7 +206,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <a href="javascript:;" data-original-title="rss" class="rss"></a>
                                         </li> --}}
                                         <li>
-                                            <a href="www.facebook.com/hati.itnmalang.7" data-original-title="facebook" class="facebook"></a>
+                                            <a href="http://www.facebook.com/hati.itnmalang.7" data-original-title="facebook" class="facebook"></a>
                                         </li>
                                         {{-- <li>
                                             <a href="javascript:;" data-original-title="twitter" class="twitter"></a>
