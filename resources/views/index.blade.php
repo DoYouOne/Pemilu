@@ -228,10 +228,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                                     <h2>Contacts HUMAS</h2>
                                     <address class="margin-bottom-40"> Phone 1: +62 878-6351-4670
-                                        <br> Phone 2: +62 878-6351-4670
+                                        <br> Phone 2: +62 857-5541-7453
                                         <br> Email:
                                         <a href="mailto:hati@scholar.itn.ac.id">hati@scholar.itn.ac.id</a>
-                                        <br> Email:
                                         <a href="mailto:hatitnmalang18@gmail.com">hatitnmalang18@gmail.com</a>
                                     </address>
                                 </div>
