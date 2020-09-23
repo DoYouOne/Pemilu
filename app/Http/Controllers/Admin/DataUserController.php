@@ -24,12 +24,11 @@ class DataUserController extends Controller
 
     function insert(Request $request)
     {
-        return User::create([
+        \App\User::create([
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
             'status'    => "2"
         ]);
-
-        return redirect('/DataUser');
+        return redirect('/data_user');
     }
 }
