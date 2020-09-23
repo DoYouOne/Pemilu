@@ -146,6 +146,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <span class="arrow"></span>
                                             </a>
                                         </li>
+                                        <li class="menu-dropdown classic-menu-dropdown ">
+                                            <a href="{{ url('/about') }}">
+                                                <i class="icon-heart"></i> About
+                                                <span class="arrow"></span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- END MEGA MENU -->
@@ -178,7 +184,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                                     <h2>About</h2>
-                                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam dolore. </p>
+                                    <p> HATI S-1 ITN Malang atau bisa disebut Himpunan Mahasiswa Teknik Informatika S-1 ITN Malang sebuah organisasi yang berdiri pada tanggal 17 September 2008. </p>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs12 footer-block">
                                     <h2>Subscribe Email</h2>
@@ -196,34 +202,37 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                                     <h2>Follow Us On</h2>
                                     <ul class="social-icons">
-                                        <li>
+                                        {{-- <li>
                                             <a href="javascript:;" data-original-title="rss" class="rss"></a>
-                                        </li>
+                                        </li> --}}
                                         <li>
                                             <a href="www.facebook.com/hati.itnmalang.7" data-original-title="facebook" class="facebook"></a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a href="javascript:;" data-original-title="twitter" class="twitter"></a>
-                                        </li>
-                                        <li>
+                                        </li> --}}
+                                        {{-- <li>
                                             <a href="javascript:;" data-original-title="googleplus" class="googleplus"></a>
                                         </li>
                                         <li>
                                             <a href="javascript:;" data-original-title="linkedin" class="linkedin"></a>
-                                        </li>
+                                        </li> --}}
                                         <li>
                                             <a href="javascript:;" data-original-title="youtube" class="youtube"></a>
                                         </li>
                                         <li>
-                                            <a href="javascript:;" data-original-title="vimeo" class="vimeo"></a>
+                                            <a href="https://www.instagram.com/hati_itn_malang/" data-original-title="instagram" class="instagram"></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
-                                    <h2>Contacts</h2>
-                                    <address class="margin-bottom-40"> Phone: 800 123 3456
+                                    <h2>Contacts HUMAS</h2>
+                                    <address class="margin-bottom-40"> Phone 1: +62 878-6351-4670
+                                        <br> Phone 2: +62 878-6351-4670
                                         <br> Email:
-                                        <a href="mailto:info@metronic.com">info@metronic.com</a>
+                                        <a href="mailto:hati@scholar.itn.ac.id">hati@scholar.itn.ac.id</a>
+                                        <br> Email:
+                                        <a href="mailto:hatitnmalang18@gmail.com">hatitnmalang18@gmail.com</a>
                                     </address>
                                 </div>
                             </div>
