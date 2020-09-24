@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DataUserController extends Controller
 {
@@ -33,6 +34,7 @@ class DataUserController extends Controller
     }
 
     function delete_data($id){
+        Alert::question('Delete?', 'Apakah Anda Yakin Ingin Menghapus User?');
         \App\User::where('id', $id)->delete();
         $cek = \App\Users_data::where('id_users', $id)->first();
         if($cek != null){
