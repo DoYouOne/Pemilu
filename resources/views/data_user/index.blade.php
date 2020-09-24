@@ -76,7 +76,11 @@
                                 @endif
                                 <i class="material-icons" id="n">clear</i>
                             </td>
-                            <td><button class="btn btn-danger">Delete</button></td>
+                            <td>
+                                <a href="{{ url('delete_user/') }}/{{ $u->id }}">
+                                    <button class="btn btn-danger">Delete</button>
+                                </a>
+                            </td>
                         </tr>
                         @php $no++; @endphp
                         @endforeach
