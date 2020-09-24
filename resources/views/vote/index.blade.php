@@ -37,7 +37,8 @@
             <div class="page-content-inner">
                 <div class="portlet light ">
                     <div class="portlet-body form">
-                        <form role="form" method="post">
+                        <form role="form" action="{{ url('vote/process') }}" method="post">
+                            @csrf
                             <div class="form-body">
                                 <h2 align="center">Pemilihan Ketua Himpunan <br>
                                     Teknik Informatika S-1</h2>
@@ -47,6 +48,7 @@
                                         <div class="form-group form-md-line-input has-success">
                                             <div class="input-icon">
                                                 <input type="text" class="form-control" placeholder="Isi nama lengkap anda" name="nama">
+                                                <input type="hidden" class="form-control"  name="id_users" value={{ Auth::user()->id }}>
                                                 <label for="form_control_1">Nama Lengkap</label>
                                                 <i class="icon-user"></i>
                                             </div>
@@ -55,7 +57,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group form-md-line-input has-success">
                                             <div class="input-icon">
-                                                <input type="number" class="form-control" placeholder="Isi NIM anda" name="NIM">
+                                                <input type="number" class="form-control" placeholder="Isi NIM anda" name="nim" pattern="[0-9]{3}" title="Masukkan 7 angka saja">
                                                 <label for="form_control_1">NIM</label>
                                                 <i class="icon-pencil"></i>
                                             </div>
@@ -97,13 +99,21 @@
                                     </div>
                                     <div class="col-md-2"></div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4">
+                                        <input type="range" min="0" max="100" id="vol" oninput="nilai(value)" name="vote">
+                                        <output for="vol" id="volume">50</output>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-5"></div>
                                 <div class="col-md-2">
                                     <div class="form-actions noborder">
-                                        <button type="button" class="btn blue" type="submit">Submit</button>
-                                        <button type="button" class="btn default" type="reset">Cancel</button>
+                                        <button class="btn blue" type="submit">Submit</button>
+                                        <button class="btn default" type="reset">Cancel</button>
                                     </div>
                                 </div>
                                 <div class="col-md-5"></div>
@@ -115,5 +125,10 @@
             <!-- END PAGE CONTENT INNER -->
         </div>
     </div>
+    <script>
+        function nilai(vol) {
+            document.querySelector('#volume').value = vol;
+        }
+    </script>
 
 @stop

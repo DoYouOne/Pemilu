@@ -44,4 +44,5 @@ Route::group(['middleware' => ['auth','CheckRole:2']], function(){
 Route::group(['middleware' => ['auth','CheckRole:0,1,2']], function(){
     Route::get('/profile', 'ProfileController@index');
     Route::get('/vote', 'VoteController@index');
+    Route::post('vote/process', 'VoteController@insert_vote');
 });
