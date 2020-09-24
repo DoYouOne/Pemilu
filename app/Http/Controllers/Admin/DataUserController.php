@@ -31,4 +31,15 @@ class DataUserController extends Controller
         ]);
         return redirect('/data_user');
     }
+
+    function delete_data($id){
+        \App\User::where('id', $id)->delete();
+        $cek = \App\Users_data::where('id_users', $id)->first();
+        if($cek != null){
+            \App\Users_data::where('id_users', $id)->delete();
+        } else{
+
+        }
+        return redirect('/data_user');
+    }
 }

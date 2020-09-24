@@ -47,7 +47,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group form-md-line-input has-success">
                                             <div class="input-icon">
-                                                <input type="text" class="form-control" placeholder="Isi nama lengkap anda" name="nama">
+                                                <input type="text" class="form-control" placeholder="Isi nama lengkap anda" name="nama" pattern="[A-Za-z].{3,}" title="Masukkan minimal 3 huruf">
                                                 <input type="hidden" class="form-control"  name="id_users" value={{ Auth::user()->id }}>
                                                 <label for="form_control_1">Nama Lengkap</label>
                                                 <i class="icon-user"></i>
