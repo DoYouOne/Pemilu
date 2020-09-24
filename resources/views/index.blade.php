@@ -45,6 +45,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END HEAD -->
 
     <body class="page-container-bg-solid">
+        @include('sweetalert::alert')
+        @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
         <div class="page-wrapper">
             <div class="page-wrapper-row">
                 <div class="page-wrapper-top">

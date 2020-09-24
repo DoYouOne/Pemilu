@@ -64,6 +64,8 @@
         </style>
     </head>
     <body>
+        @include('sweetalert::alert')
+        @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
