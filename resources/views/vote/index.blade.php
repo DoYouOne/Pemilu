@@ -44,57 +44,52 @@
                                     Teknik Informatika S-1</h2>
                                 <h4 align="center">Periode 2020/2021</h4><br><br>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group form-md-line-input has-success">
                                             <div class="input-icon">
                                                 <input type="text" class="form-control" placeholder="Isi nama lengkap anda" name="nama" pattern="[A-Za-z].{3,}" title="Masukkan minimal 3 huruf">
                                                 <input type="hidden" class="form-control"  name="id_users" value={{ Auth::user()->id }}>
+                                                <input type="hidden" class="form-control" value="0" name="nim">
                                                 <label for="form_control_1">Nama Lengkap</label>
                                                 <i class="icon-user"></i>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group form-md-line-input has-success">
-                                            <div class="input-icon">
-                                                <input type="number" class="form-control" placeholder="Isi NIM anda" name="nim" pattern="[0-9]{3}" title="Masukkan 7 angka saja">
-                                                <label for="form_control_1">NIM</label>
-                                                <i class="icon-pencil"></i>
+                                    @php
+                                        $cek = Auth::user()->status;
+                                    @endphp
+                                    @if ($cek != 2)
+                                        <div class="col-md-6">
+                                            <div class="form-group form-md-line-input has-success">
+                                                <div class="input-icon">
+                                                    <input type="number" class="form-control" placeholder="Isi NIM anda" name="nim" pattern="[0-9]{3}" title="Masukkan 7 angka saja">
+                                                    <label for="form_control_1">NIM</label>
+                                                    <i class="icon-pencil"></i>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 </div>
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-8">
                                         <div class="row">
                                             <div class="col-sm-1"></div>
-                                            <div class="col-sm-5">
-                                                <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:300px;">
-                                                <h4 align="center">Noelle Kim</h4>
-                                                <h5 align="justify">&emsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
-                                                <h5>
-                                                    <ul>
-                                                        <li>What is Lorem Ipsum</li>
-                                                        <li>Where does it come from</li>
-                                                        <li>Where can I get some</li>
-                                                        <li>Lorem Ipsum</li>
-                                                    </ul>
-                                                </h5>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <img src="{{ URL::asset('user/assets/pages/img/avatars/team6.jpg') }}" alt="candidate-2" style="height:300px;">
-                                                <h4 align="center">A-ram Seo</h4>
-                                                <h5 align="justify">&emsp; Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h5>
-                                                <h5>
-                                                    <ul>
-                                                        <li>What is Lorem Ipsum</li>
-                                                        <li>Where does it come from</li>
-                                                        <li>Where can I get some</li>
-                                                        <li>Lorem Ipsum</li>
-                                                    </ul>
-                                                </h5>
-                                            </div>
+                                            @foreach ($candidate as $c)
+                                                <div class="col-sm-5">
+                                                    <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:300px;">
+                                                    <h4 align="center">{{ $c->kandidat }}</h4>
+                                                    <h5 align="justify">&emsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
+                                                    <h5>
+                                                        <ul>
+                                                            <li>What is Lorem Ipsum</li>
+                                                            <li>Where does it come from</li>
+                                                            <li>Where can I get some</li>
+                                                            <li>Lorem Ipsum</li>
+                                                        </ul>
+                                                    </h5>
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="col-md-2"></div>
@@ -103,7 +98,7 @@
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
                                         <input type="range" min="0" max="100" id="vol" oninput="nilai(value)" name="vote">
-                                        <output for="vol" id="volume">50</output>
+                                        {{--  <output for="vol" id="volume">50</output>  --}}
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>

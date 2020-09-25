@@ -46,32 +46,13 @@
                                     <div class="col-md-8">
                                         <div class="row">
                                             <div class="col-sm-1"></div>
+                                            @foreach ($candidate as $c)
                                             <div class="col-sm-5">
                                                 <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:300px;">
-                                                <h4 align="center">Noelle Kim</h4>
-                                                <h5 align="justify">&emsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
-                                                <h5>
-                                                    <ul>
-                                                        <li>What is Lorem Ipsum</li>
-                                                        <li>Where does it come from</li>
-                                                        <li>Where can I get some</li>
-                                                        <li>Lorem Ipsum</li>
-                                                    </ul>
-                                                </h5>
+                                                <h4 align="center">{{ $c->kandidat }}</h4>
+                                                <h4 align="center">{{ $c->jumlah }} Suara</h4>
                                             </div>
-                                            <div class="col-sm-5">
-                                                <img src="{{ URL::asset('user/assets/pages/img/avatars/team6.jpg') }}" alt="candidate-2" style="height:300px;">
-                                                <h4 align="center">A-ram Seo</h4>
-                                                <h5 align="justify">&emsp; Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</h5>
-                                                <h5>
-                                                    <ul>
-                                                        <li>What is Lorem Ipsum</li>
-                                                        <li>Where does it come from</li>
-                                                        <li>Where can I get some</li>
-                                                        <li>Lorem Ipsum</li>
-                                                    </ul>
-                                                </h5>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <div class="col-md-2"></div>
