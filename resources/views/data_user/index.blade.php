@@ -78,7 +78,7 @@
                             </td>
                             <td>
                                 <a href="{{ url('delete_user/') }}/{{ $u->id }}">
-                                    <button class="btn btn-danger">Delete</button>
+                                    <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $u->email }} ?');">Delete</button>
                                 </a>
                             </td>
                         </tr>

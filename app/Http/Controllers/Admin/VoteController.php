@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class VoteController extends Controller
 {
     public function index(){
-        return view('vote.vote_all');
+        $data['candidate'] = \App\Users_vote::all();
+        return view('vote.vote_all',$data);
     }
 }

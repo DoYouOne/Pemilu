@@ -57,9 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="container">
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
-                                    <a href="index.html">
-                                        <img src="logo.png" alt="logo" class="logo-default" style="width:120px;">
-                                    </a>
+                                    <img src="logo.png" alt="logo" class="logo-default" style="width:120px;">
                                 </div>
                                 <!-- END LOGO -->
                                 <!-- BEGIN RESPONSIVE MENU TOGGLER -->

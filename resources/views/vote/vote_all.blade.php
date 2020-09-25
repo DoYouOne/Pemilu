@@ -31,19 +31,21 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-body">
-                <br>
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
+                        <h3 align="center">Hasil Pemilihan Ketua Himpunan
+                            <br> Teknik Informatika S-1
+                        </h3>
+                        <h5 align="center" style="margin-top: -5px;">Periode 2020-2021</h5>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:280px; width:auto;">
-                                <h4 align="center">Noelle Kim</h4>
-                            </div>
-                            <div class="col-sm-5">
-                                <img src="{{ URL::asset('user/assets/pages/img/avatars/team6.jpg') }}" alt="candidate-2" style="height:300px;">
-                                <h4 align="center">A-ram Seo</h4>
-                            </div>
+                            @foreach ($candidate as $c)
+                                <div class="col-sm-6">
+                                    <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:280px; width:auto; padding-bottom:10px;">
+                                    <h4 align="center">{{ $c->kandidat }}</h4>
+                                    <h4 align="center">{{ $c->jumlah }} Suara</h4>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-md-2"></div>

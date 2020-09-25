@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class VoteController extends Controller
 {
@@ -23,7 +25,15 @@ class VoteController extends Controller
      */
     public function index()
     {
-        return view('vote.index');
+        $data['candidate'] = \App\Users_vote::all();
+        $user = Auth::user()->id;
+        $cek = DB::select("select * from users_data where id_users = '$user'",[1]);
+        foreach($cek as $c){
+        }
+        if(isset($c->vote) != null){
+            return view('vote.done', $data);
+        }
+        return view('vote.index', $data);
     }
 
     public function insert_vote(Request $request){
