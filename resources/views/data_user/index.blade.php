@@ -71,10 +71,11 @@
                                 @endif
                             </td>
                             <td>
-                                @if ($u->vote != null)
+                                @if (($u->vote != null || ($u->vote != 0)))
                                     <i class="material-icons" id="y">done</i>
+                                @else
+                                    <i class="material-icons" id="n">clear</i>
                                 @endif
-                                <i class="material-icons" id="n">clear</i>
                             </td>
                             <td>
                                 <a href="{{ url('delete_user/') }}/{{ $u->id }}">
