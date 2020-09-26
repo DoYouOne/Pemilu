@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Console\Migrations\RefreshCommand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class VoteController extends Controller
 {
@@ -42,6 +45,10 @@ class VoteController extends Controller
             $v = 1;
         } elseif(($vo >50) && ($vo <=100)){
             $v = 2;
+        } else {
+
+            Alert::warning('Data Tidak Valid', 'Pastikan sudah mengisi NAMA dan NIM dengan benar, Untuk memilih calon kahim harap menggeser slide yang disediakan');
+            return back();
         }
         \App\Users_data::create([
             'id_users'   => $request->id_users,
@@ -52,4 +59,5 @@ class VoteController extends Controller
 
         return redirect('/');
     }
+    
 }
