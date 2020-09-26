@@ -107,7 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="page-header-menu">
                             <div class="container">
                                 <!-- BEGIN HEADER SEARCH BOX -->
-                                <form class="search-form" action="page_general_search.html" method="GET">
+                                {{-- <form class="search-form" action="page_general_search.html" method="GET">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Search" name="query">
                                         <span class="input-group-btn">
@@ -116,7 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </a>
                                         </span>
                                     </div>
-                                </form>
+                                </form> --}}
                                 <!-- END HEADER SEARCH BOX -->
                                 <!-- BEGIN MEGA MENU -->
                                 <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->

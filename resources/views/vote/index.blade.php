@@ -44,7 +44,7 @@
                                     Teknik Informatika S-1</h2>
                                 <h4 align="center">Periode 2020/2021</h4><br><br>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group form-md-line-input has-success">
                                             <div class="input-icon">
                                                 <input type="text" class="form-control" placeholder="Isi nama lengkap anda" name="nama" pattern="[A-Za-z].{3,}" title="Masukkan minimal 3 huruf">
@@ -113,6 +113,12 @@
                                 </div>
                                 <div class="col-md-5"></div>
                             </div>
+                            <div class="col-md-6">
+                                <p><i>NB : </i></p>
+                                <p><i> - Harap menggunakan menggunakan email scholar, atau data tidak diterima.</i></p>
+                                <p><i> - Isikan nama lengkap Anda dan NIM dengan benar.</i></p>
+                            </div>
+                            <br><br><br><br><br><br>
                         </form>
                     </div>
                 </div>
