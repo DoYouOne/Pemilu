@@ -51,7 +51,6 @@
                           <th>NIM</th>
                           <th>Email</th>
                           <th>Status</th>
-                          <th>Vote</th>
                           <th>Aksi</th>
                     </thead>
                     <tbody>
@@ -68,13 +67,6 @@
                                     Mahasiswa
                                 @elseif ($u->status == 2)
                                     Alumni
-                                @endif
-                            </td>
-                            <td>
-                                @if (($u->vote != null || ($u->vote != 0)))
-                                    <i class="material-icons" id="y">done</i>
-                                @else
-                                    <i class="material-icons" id="n">clear</i>
                                 @endif
                             </td>
                             <td>

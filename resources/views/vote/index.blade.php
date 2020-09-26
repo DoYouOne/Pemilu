@@ -116,12 +116,15 @@
                             </div>
                             <br><br>
                             <div class="col-md-12">
-                                <p><i>NB : </i></p>
-                                <p><i> - Isikan nama lengkap Anda dan NIM dengan benar.</i></p>
-                                <p><i> - <strong>Geser Slide ke kiri</strong> untuk Kirene Wardani Joas dan ke kanan untuk Dhiemas Ariobimo Wijaya</i></p>
-                                <p><i> - Harap menggunakan menggunakan email scholar, atau data tidak diterima.</i></p>
+                                <p style="padding-left:20px;"><i>NB:</i></p>
+                                <ul>
+                                    <li>Isikan nama lengkap Anda dan NIM dengan benar.</li>
+                                    <li><strong>Geser Slide ke kiri</strong> untuk Kirene Wardani Joas</li>
+                                    <li><strong>Geser Slide ke Kanan</strong> untuk Dhiemas Ariobimo Wijaya</li>
+                                    <li>Harap menggunakan menggunakan email scholar, atau data tidak diterima</li>
+                                </ul>
                             </div>
-                            <br><br><br><br><br><br><br><br><br>
+                            <br><br><br><br><br><br>
                         </form>
                     </div>
                 </div>

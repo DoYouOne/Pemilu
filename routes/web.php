@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth','CheckRole:0']], function(){
     Route::post('/data_user/add', 'Admin\DataUserController@insert');
     Route::get('/add_alumni', 'Admin\DataUserController@add_alumni');
     Route::get('/vote/admin', 'Admin\VoteController@index');
+    Route::get('/delete_vote/{id}', 'Admin\VoteController@delete_data');
     Route::get('/delete_user/{id}', 'Admin\DataUserController@delete_data');
 });
 
