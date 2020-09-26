@@ -77,16 +77,16 @@
                                             <div class="col-sm-1"></div>
                                             @foreach ($candidate as $c)
                                                 <div class="col-sm-5">
-                                                    <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:300px;">
+                                                    <img src="{{ URL::asset($c->foto) }}" alt="candidate-1" style="height:280px; width:auto; padding-bottom:10px; margin-left: 45px">
                                                     <h4 align="center">{{ $c->kandidat }}</h4>
-                                                    <h5 align="justify">&emsp; Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book.</h5>
+                                                    <h5 align="justify">&emsp;{{ $c->VISI }}</h5>
                                                     <h5>
-                                                        <ul>
-                                                            <li>What is Lorem Ipsum</li>
-                                                            <li>Where does it come from</li>
-                                                            <li>Where can I get some</li>
-                                                            <li>Lorem Ipsum</li>
-                                                        </ul>
+                                                        <ol>
+                                                            <li>{{ $c->MISI_1 }}</li>
+                                                            <li>{{ $c->MISI_2 }}</li>
+                                                            <li>{{ $c->MISI_3 }}</li>
+                                                            <li>{{ $c->MISI_4 }}</li>
+                                                        </ol>
                                                     </h5>
                                                 </div>
                                             @endforeach
@@ -94,6 +94,7 @@
                                     </div>
                                     <div class="col-md-2"></div>
                                 </div>
+                                <br><br>
                                 <div class="row">
                                     <div class="col-md-4"></div>
                                     <div class="col-md-4">
@@ -113,12 +114,14 @@
                                 </div>
                                 <div class="col-md-5"></div>
                             </div>
-                            <div class="col-md-6">
+                            <br><br>
+                            <div class="col-md-12">
                                 <p><i>NB : </i></p>
-                                <p><i> - Harap menggunakan menggunakan email scholar, atau data tidak diterima.</i></p>
                                 <p><i> - Isikan nama lengkap Anda dan NIM dengan benar.</i></p>
+                                <p><i> - Geser Slide ke kiri untuk Kirene Wardani Joas dan ke kanan untuk Dhiemas Ariobimo Wijaya</i></p>
+                                <p><i> - Harap menggunakan menggunakan email scholar, atau data tidak diterima.</i></p>
                             </div>
-                            <br><br><br><br><br><br>
+                            <br><br><br><br><br><br><br><br><br>
                         </form>
                     </div>
                 </div>

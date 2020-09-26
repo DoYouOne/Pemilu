@@ -16,6 +16,12 @@ class CreateUsersVote extends Migration
         Schema::create('users_vote', function (Blueprint $table) {
             $table->id();
             $table->string('kandidat');
+            $table->string('foto');
+            $table->string('VISI');
+            $table->string('MISI_1');
+            $table->string('MISI_2');
+            $table->string('MISI_3');
+            $table->string('MISI_4');
             $table->integer('jumlah');
             $table->timestamps();
         });
