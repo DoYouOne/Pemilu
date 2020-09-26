@@ -85,7 +85,9 @@
                                                             <li>{{ $c->MISI_1 }}</li>
                                                             <li>{{ $c->MISI_2 }}</li>
                                                             <li>{{ $c->MISI_3 }}</li>
-                                                            <li>{{ $c->MISI_4 }}</li>
+                                                            @if ($c->MISI_4 != null)
+                                                                <li>{{ $c->MISI_4  }}</li>
+                                                            @endif
                                                         </ol>
                                                     </h5>
                                                 </div>
