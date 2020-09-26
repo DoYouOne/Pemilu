@@ -9,13 +9,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class DataUserController extends Controller
 {
 
     public function index(){
-        $data['user']= \App\User::all();
+        $data['user']= DB::select('SELECT * FROM `users` left join users_data on users.id = users_data.id_users');
         return view('data_user.index',$data);
     }
 

@@ -49,6 +49,7 @@ class VoteController extends Controller
             'nama'      => $request->nama,
             'vote'      => $v
         ]);
+
         return redirect('/');
     }
 }
