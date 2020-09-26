@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('dashboard/home');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/login_process','AuthController@post_login')->name('login_process');
 Route::get('/register', 'Auth\RegisterController@index')->name('register');
@@ -45,6 +45,6 @@ Route::group(['middleware' => ['auth','CheckRole:2']], function(){
 
 Route::group(['middleware' => ['auth','CheckRole:0,1,2']], function(){
     Route::get('/profile', 'ProfileController@index');
-    Route::get('/vote', 'VoteController@index');
+    Route::get('/vote', 'VoteController@index')->middleware('verified');
     Route::post('vote/process', 'VoteController@insert_vote');
 });
