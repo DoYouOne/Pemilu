@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
 <style>
     #y {
         border-radius: 25px;
@@ -30,30 +33,71 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">Data Hak Suara</h4>
+            </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <h3 align="center">Hasil Pemilihan Ketua Himpunan
-                            <br> Teknik Informatika S-1
-                        </h3>
-                        <h5 align="center" style="margin-top: -5px;">Periode 2020-2021</h5>
-                        <div class="row">
-                            @foreach ($candidate as $c)
-                                <div class="col-sm-6">
-                                    <img src="{{ URL::asset($c->foto) }}" alt="candidate-1" style="height:280px; width:auto; padding-bottom:10px; margin-left: 45px">
-                                    <h4 align="center">{{ $c->kandidat }}</h4>
-                                    <h4 align="center">{{ $c->jumlah }} Suara</h4>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
+              <div class="table-responsive">
+                <table cellpadding="0" cellspacing="0" border="0" class="display" style="width:100%;" id="anggota">
+                    <thead>
+                        <th>ID</th>
+                          <th>NIM</th>
+                          <th>Email</th>
+                          <th>Status</th>
+                          <th>Vote</th>
+                          <th>Aksi</th>
+                    </thead>
+                    <tbody>
+                        @php $no = 1; @endphp
+                        @foreach ($user as $u)
+                        <tr>
+                            <td>{{ $no }}</td>
+                            <td>1818001</td>
+                            <td>{{ $u->email }}</td>
+                            <td>
+                                @if ($u->status == 0)
+                                    Admin
+                                @elseif ($u->status == 1)
+                                    Mahasiswa
+                                @elseif ($u->status == 2)
+                                    Alumni
+                                @endif
+                            </td>
+                            <td>
+                                @if (($u->vote != null || ($u->vote != 0)))
+                                    <i class="material-icons" id="y">done</i>
+                                @else
+                                    <i class="material-icons" id="n">clear</i>
+                                @endif
+                            </td>
+                            <td>
+                                @if ($u->id != null)
+                                    <a href="{{ url('delete_vote/') }}/{{ $u->id }}">
+                                        <button class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus  {{ $u->email }} ?');">Delete</button>
+                                    </a>
+                                    @else
+
+                                @endif
+                            </td>
+                        </tr>
+                        @php $no++; @endphp
+                        @endforeach
+                    </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript">
+  $('#anggota').DataTable({
+      responsive: true
+  } );
+</script>
 @stop

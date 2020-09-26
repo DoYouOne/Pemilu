@@ -16,7 +16,7 @@ class DataUserController extends Controller
 {
 
     public function index(){
-        $data['user']= DB::select('SELECT * FROM `users` left join users_data on users.id = users_data.id_users');
+        $data['user']= \App\User::all();
         return view('data_user.index',$data);
     }
 
@@ -36,12 +36,12 @@ class DataUserController extends Controller
 
     function delete_data($id){
         // Alert::question('Delete?', 'Apakah Anda Yakin Ingin Menghapus User?');
-        \App\User::where('id', $id)->delete();
         $cek = \App\Users_data::where('id_users', $id)->first();
         if($cek != null){
+            \App\User::where('id', $id)->delete();
             \App\Users_data::where('id_users', $id)->delete();
         } else{
-
+            \App\User::where('id', $id)->delete();
         }
         return redirect('/data_user');
     }
