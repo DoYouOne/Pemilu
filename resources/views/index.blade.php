@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="container">
                                 <!-- BEGIN LOGO -->
                                 <div class="page-logo">
-                                    <img src="logo.png" alt="logo" class="logo-default" style="width:120px;">
+                                    <img src="{{ url('logo.png') }}" alt="logo" class="logo-default" style="width:120px;">
                                 </div>
                                 <!-- END LOGO -->
                                 <!-- BEGIN RESPONSIVE MENU TOGGLER -->
