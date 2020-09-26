@@ -87,10 +87,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                             @endif
                                             <ul class="dropdown-menu dropdown-menu-default">
                                                 <li>
-                                                    <a href="{{ url('profile') }}">
-                                                        <i class="icon-user"></i> My Profile </a>
-                                                </li>
-                                                <li>
                                                     <a href="{{ url('/logout') }}">
                                                         <i class="icon-key"></i> Log Out </a>
                                                 </li>

@@ -41,7 +41,7 @@
                         <div class="row">
                             @foreach ($candidate as $c)
                                 <div class="col-sm-6">
-                                    <img src="{{ URL::asset('user/assets/pages/img/avatars/team5.jpg') }}" alt="candidate-1" style="height:280px; width:auto; padding-bottom:10px;">
+                                    <img src="{{ URL::asset($c->foto) }}" alt="candidate-1" style="height:280px; width:auto; padding-bottom:10px; margin-left: 45px">
                                     <h4 align="center">{{ $c->kandidat }}</h4>
                                     <h4 align="center">{{ $c->jumlah }} Suara</h4>
                                 </div>

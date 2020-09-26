@@ -118,7 +118,7 @@
                             <div class="col-md-12">
                                 <p><i>NB : </i></p>
                                 <p><i> - Isikan nama lengkap Anda dan NIM dengan benar.</i></p>
-                                <p><i> - Geser Slide ke kiri untuk Kirene Wardani Joas dan ke kanan untuk Dhiemas Ariobimo Wijaya</i></p>
+                                <p><i> - <strong>Geser Slide ke kiri</strong> untuk Kirene Wardani Joas dan ke kanan untuk Dhiemas Ariobimo Wijaya</i></p>
                                 <p><i> - Harap menggunakan menggunakan email scholar, atau data tidak diterima.</i></p>
                             </div>
                             <br><br><br><br><br><br><br><br><br>
