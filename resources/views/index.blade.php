@@ -76,12 +76,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <li class="dropdown dropdown-user dropdown-dark">
                                             @if(Auth::check() == null)
                                                 <a href="{{ url('/login') }}" class="dropdown-toggle">
-                                                    <img alt="" class="img-circle" src="annonym.png">
+                                                    <img alt="" class="img-circle" src="annonym.png" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
                                                     <span class="username username-hide-mobile">Login Now!</span>
                                                 </a>
                                             @else
                                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                    <img alt="" class="img-circle" src="useer.png">
+                                                    <img alt="" class="img-circle" src="useer.png" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
                                                     <span class="username username-hide-mobile">{{ Auth::user()->email }}</span>
                                                 </a>
                                             @endif
