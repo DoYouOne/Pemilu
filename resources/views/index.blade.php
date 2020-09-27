@@ -41,7 +41,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{URL::asset ('user/assets/layouts/layout3/css/themes/default.min.css')}}" rel="stylesheet" type="text/css" id="style_color" />
         <link href="{{URL::asset ('user/assets/layouts/layout3/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="checklist.png" /> </head>
+        <link rel="shortcut icon" href="{{ URL::asset('checklist.png') }}" /> </head>
     <!-- END HEAD -->
 
     <body class="page-container-bg-solid">
@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 </a>
                                             @else
                                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                    <img alt="" class="img-circle" src="useer.png" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
+                                                    <img alt="" class="img-circle" src="{{ URL::asset('useer.png') }}" style="width: 30px; height: auto; margin-top: 1px; margin-bottom: 1px;">
                                                     <span class="username username-hide-mobile">{{ Auth::user()->email }}</span>
                                                 </a>
                                             @endif
