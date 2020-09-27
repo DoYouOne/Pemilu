@@ -6,7 +6,7 @@
         <!-- BEGIN PAGE CONTENT INNER -->
         <div class="page-content-inner" style="margin-top: 20px">
             <div class="portlet light">
-                <table class="table" style="width: 330px">
+                <table class="table" style="width: auto">
                     <thead>
                       <tr>
                         <th scope="col">Institut Teknologi Nasional Malang</th>
