@@ -180,7 +180,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                                     <h2>About</h2>
-                                    <p> HATI S-1 ITN Malang atau bisa disebut Himpunan Mahasiswa Teknik Informatika S-1 ITN Malang sebuah organisasi yang berdiri pada tanggal 17 September 2008. </p>
+                                    <p class="text-justify"> HATI S-1 ITN Malang atau bisa disebut Himpunan Mahasiswa Teknik Informatika S-1 ITN Malang sebuah organisasi yang berdiri pada tanggal 17 September 2008. </p>
                                 </div>
                                 <div class="col-md-3 col-sm-6 col-xs12 footer-block">
                                     <h2>Subscribe Email</h2>
